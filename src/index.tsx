@@ -1,19 +1,35 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { ThemeProvider } from 'styled-components'
+import { darkTheme } from './Theme';
+import { RecoilRoot } from 'recoil';
+import { GlobalStyle } from './styles/GlobalStyle';
+import { HelmetProvider,Helmet } from 'react-helmet-async';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+  
+  <RecoilRoot>
+    <ThemeProvider theme={darkTheme}> 
+      <HelmetProvider>
+        <Helmet>
+          {/*<!--글꼴-->*/}
+          <link
+            type="text/css"
+            media="screen"
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Source+Sans+Pro:wght@300&display=swap"
+          />
+          <title>Todo Board</title>
+        </Helmet>
+        <GlobalStyle/>
+        <App />
+      </HelmetProvider>
+    </ThemeProvider>
+  </RecoilRoot>
+  
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
