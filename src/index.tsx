@@ -22,8 +22,8 @@ root.render(
             media="screen"
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&family=Source+Sans+Pro:wght@300&display=swap"
-          />
-          <title>Todo Board</title>
+          />        
+          <title>Todo Board </title> 
         </Helmet>
         <GlobalStyle/>
         <App />

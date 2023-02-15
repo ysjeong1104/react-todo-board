@@ -2,7 +2,7 @@ import React from 'react';
 import { useRecoilState } from 'recoil';
 import { boardState } from './states/atoms';
 import {DragDropContext, Droppable, DropResult} from "react-beautiful-dnd"
-import { BoardForm, Boards, MainTitle,  TrashArea,  TrashCan,  Wrapper } from './styles/ToDoStyle';
+import { BoardForm, Boards, MainTitle, Wrapper } from './styles/ToDoStyle';
 import  Board  from "./Components/Board";
 import { useForm } from 'react-hook-form';
 import Trash from './Components/Trash';
